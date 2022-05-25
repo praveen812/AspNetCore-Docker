@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:6.0 AS build
+FROM microsoft/aspnetcore-build:6.0 
 WORKDIR /code
 COPY . .
 RUN dotnet restore

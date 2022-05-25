@@ -1,10 +1,10 @@
-FROM microsoft/aspnetcore-build:4.8 AS build
+FROM microsoft/aspnetcore-build:6.0 AS build
 WORKDIR /code
 COPY . .
 RUN dotnet restore
 RUN dotnet publish --output /output --configuration Release
 
-FROM microsoft/aspnetcore:4.8
+FROM microsoft/aspnetcore:6.0
 COPY --from=build /output /app
 WORKDIR /app
 ENTRYPOINT ["dotnet", "AspNetCoreOnDocker.dll"]

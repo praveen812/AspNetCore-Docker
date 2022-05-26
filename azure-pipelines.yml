@@ -1,5 +1,5 @@
 # Docker
-- task: Docker@2
+ task: Docker@2
   inputs:
     containerRegistry: 'docker'
     repository: 'praveen812'
@@ -8,7 +8,7 @@
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-trigger:
+trigger :
 - master
 
 resources:
